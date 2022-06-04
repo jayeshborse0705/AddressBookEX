@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,58 +9,74 @@ namespace AddressBook
 {
     internal class ContactDetails
     {
-         public string FirstName;
-        public string LastName;
-        public string Address;
-        public string City;
-        public string State;
-        public int Zip;
-        public long PhoneNumber;
-        public string Email;
-
-        public void Contact()
+        ArrayList contacts = new ArrayList();
+        public void AddContacts()
         {
-            List<ContactDetails> list = new List<ContactDetails>();
-            ContactDetails contact = new ContactDetails();
+            Console.WriteLine("Enter number of Contacts:");
+            int Num = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Enter the First Name:");
-            contact.FirstName = Console.ReadLine();
+            for (int i = 1; i <= Num; i++)
+            {
+                Console.WriteLine("Enter the First Name:");
+                string FirstName = Console.ReadLine();
 
-            Console.WriteLine("Enter the Last Name:");
-            contact.LastName = Console.ReadLine();
+                Console.WriteLine("Enter the Last Name:");
+                string LastName = Console.ReadLine();
 
-            Console.WriteLine("Enter the Address:");
-            contact.Address = Console.ReadLine();
+                Console.WriteLine("Enter the Address:");
+                string Address = Console.ReadLine();
 
-            Console.WriteLine("Enter the City:");
-            contact.City = Console.ReadLine();
+                Console.WriteLine("Enter the City:");
+                string City = Console.ReadLine();
 
-            Console.WriteLine("Enter the State:");
-            contact.State = Console.ReadLine();
+                Console.WriteLine("Enter the State:");
+                string State = Console.ReadLine();
 
-            Console.WriteLine("Enter the Zipcode:");
-            contact.Zip = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Enter the phone number:");
-            contact.PhoneNumber = Convert.ToInt64(Console.ReadLine());
-
-            Console.WriteLine("Enter the Email:");
-            contact.Email = Console.ReadLine();
+                Console.WriteLine("Enter the Email:");
+                string Email = Console.ReadLine();
 
 
-            list.Add(contact);
+                Console.WriteLine("Enter the Zipcode:");
+                string Zip = Console.ReadLine();
 
-            Console.WriteLine("\n");
-            Console.WriteLine("\n");
+                Console.WriteLine("Enter the phone number:");
+                string PhoneNumber = Console.ReadLine();
+                contacts.Add(FirstName);
+                contacts.Add(LastName);
+                contacts.Add(Address);
+                contacts.Add(City);
+                contacts.Add(State);
+                contacts.Add(Email);
+                contacts.Add(Zip);
+                contacts.Add(PhoneNumber);
 
-            Console.WriteLine("FirstName: " + contact.FirstName);
-            Console.WriteLine("LastName: " + contact.LastName);
-            Console.WriteLine("Address: " + contact.Address);
-            Console.WriteLine("City: " + contact.City);
-            Console.WriteLine("State: " + contact.State);
-            Console.WriteLine("ZipCode: " + contact.Zip);
-            Console.WriteLine("Phone Number: " + contact.PhoneNumber);
-            Console.WriteLine("Email: " + contact.Email);
+            }
+
+            int j = 0;
+            int count = 1;
+            foreach (var item in contacts)
+            {
+                if (j % 8 == 0)
+                {
+                    Console.WriteLine("\n");
+                    Console.WriteLine("\n");
+
+                    Console.WriteLine("Number of person :" + count);
+                    Console.WriteLine("FirstName: " + contacts[j]);
+                    Console.WriteLine("LastName: " + contacts[j + 1]);
+                    Console.WriteLine("Address : " + contacts[j + 2]);
+                    Console.WriteLine("City: " + contacts[j + 3]);
+                    Console.WriteLine("State: " + contacts[j + 4]);
+                    Console.WriteLine("Email: " + contacts[j + 5]);
+                    Console.WriteLine("ZipCode: " + contacts[j + 6]);
+                    Console.WriteLine("Phone Number: " + contacts[j + 7]);
+
+                    count++;
+                }
+                j++;
+            }
+
         }
+
     }
 }
