@@ -5,10 +5,11 @@
         public static void Main(string[] args)
         {
             ContactDetails contactDetail = new ContactDetails();
-            contactDetail.AddingContacts();
-            contactDetail.EditContact();
+            contactDetail.Contacts();
+            contactDetail.DeleteContact();
         }
 
     }
 
 }
+
