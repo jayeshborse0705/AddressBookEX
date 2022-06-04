@@ -5,7 +5,8 @@
         public static void Main(string[] args)
         {
             ContactDetails contactDetail = new ContactDetails();
-            contactDetail.AddContacts();
+            contactDetail.AddingContacts();
+            contactDetail.EditContact();
         }
 
     }
