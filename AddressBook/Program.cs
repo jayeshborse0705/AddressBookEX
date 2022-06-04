@@ -4,9 +4,8 @@
     {
         public static void Main(string[] args)
         {
-            ContactDetails contactDetail = new ContactDetails();
-            contactDetail.Contacts();
-            contactDetail.DeleteContact();
+            ContactDetails contactDetails = new ContactDetails();
+            contactDetails.AddMultipleContact();
         }
 
     }

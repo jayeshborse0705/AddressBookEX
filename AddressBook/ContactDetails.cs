@@ -10,7 +10,8 @@ namespace AddressBook
     internal class ContactDetails
     {
         ArrayList contacts = new ArrayList();
-        public void Contacts()
+
+        public void AddMultipleContact()
         {
             Console.WriteLine("Enter number of Contacts:");
             int Num = Convert.ToInt32(Console.ReadLine());
@@ -76,52 +77,6 @@ namespace AddressBook
                 }
                 j++;
             }
-
-        }
-
-        public void DeleteContact()
-        {
-            Console.WriteLine("Enter the name you want to remove");
-            string Firstname = Console.ReadLine();
-            for (int i = 0; i < contacts.Count; i += 8)
-            {
-                if (string.Equals(Firstname, (contacts[i])))
-                {
-                    contacts.RemoveAt(i);
-                    contacts.RemoveAt(i);
-                    contacts.RemoveAt(i);
-                    contacts.RemoveAt(i);
-                    contacts.RemoveAt(i);
-                    contacts.RemoveAt(i);
-                    contacts.RemoveAt(i);
-                    contacts.RemoveAt(i);
-                }
-            }
-            int j = 0;
-            int count = 1;
-            foreach (var item in contacts)
-            {
-                if (j % 8 == 0)
-                {
-                    Console.WriteLine("\n");
-                    Console.WriteLine("\n");
-                    Console.WriteLine("After Editing the details are:");
-
-                    Console.WriteLine("Number of person :" + count);
-                    Console.WriteLine("FirstName: " + contacts[j]);
-                    Console.WriteLine("LastName: " + contacts[j + 1]);
-                    Console.WriteLine("Address : " + contacts[j + 2]);
-                    Console.WriteLine("City: " + contacts[j + 3]);
-                    Console.WriteLine("State: " + contacts[j + 4]);
-                    Console.WriteLine("Email: " + contacts[j + 5]);
-                    Console.WriteLine("ZipCode: " + contacts[j + 6]);
-                    Console.WriteLine("Phone Number: " + contacts[j + 7]);
-                    count++;
-                }
-                j++;
-
-            }
-
 
         }
     }
