@@ -13,7 +13,7 @@ namespace AddressBook
         List<Contact> lists = new List<Contact>();
         public void AddingContacts()
         {
-            Console.WriteLine("Enter number of Contacts:");
+            Console.WriteLine("Enter number of Contact:");
             int Num = Convert.ToInt32(Console.ReadLine());
             for (int i = 1; i <= Num; i++)
             {
@@ -174,6 +174,19 @@ namespace AddressBook
                                     "\nAddress :" + item.Address + " " + "\nCity :" + item.City + " " +
                                     "\nState :" + item.State + " " + "\nEmail :" + item.Email + " " +
                                     "\nZip Code :" + item.Zip + " " + "\nPhoneNumber :" + item.PhoneNumber);
+                Console.WriteLine("-------------------------------------------------------------------------");
+            }
+        }
+        public void ViewByState(string State)
+        {
+            var result = lists.FindAll(r => r.State == State);
+            Console.WriteLine("Details of people who live in state :");
+            foreach (var item in result)
+            {
+                Console.WriteLine("First Name :" + item.FirstName + " " + "\nLast Name :" + item.LastName + " " +
+                                  "\nEmail ID :" + item.Email + " " + "\nAddress :" + item.Address + " " +
+                                  "\nCity Name :" + item.City + " " + "\nState Name :" + item.State + " " +
+                                  "\nZip Code :" + item.Zip + " " + "\nPhoneNumber :" + item.PhoneNumber);
                 Console.WriteLine("-------------------------------------------------------------------------");
             }
         }

@@ -25,6 +25,7 @@
                             Console.WriteLine("3:To Edit Office Contacts");
                             Console.WriteLine("4:To Remove a Office contact");
                             Console.WriteLine("5: To search with city name");
+                            Console.WriteLine("6: To View with State Name");
                             Console.WriteLine("0:To Exit");
 
                             int option1 = Convert.ToInt32(Console.ReadLine());
@@ -50,6 +51,11 @@
                                     string city = Console.ReadLine();
                                     friend.SearchPerson(city);
                                     continue;
+                                case 6:
+                                    Console.WriteLine("Enter state");
+                                    string State = Console.ReadLine();
+                                    friend.ViewByState(State);
+                                    continue;
                                 default:
                                     Console.WriteLine("Enter a valid Input");
                                     break;
@@ -68,6 +74,7 @@
                             Console.WriteLine("3:To Edit Office Contacts");
                             Console.WriteLine("4:To Remove a Office contact");
                             Console.WriteLine("5: To search with city name");
+                            Console.WriteLine("6: To View with State Name");
                             Console.WriteLine("0:To Exit");
 
                             int option1 = Convert.ToInt32(Console.ReadLine());
@@ -92,6 +99,11 @@
                                     Console.WriteLine("Enter city");
                                     string City = Console.ReadLine();
                                     office.SearchPerson(City);
+                                    continue;
+                                case 6:
+                                    Console.WriteLine("Enter state");
+                                    string State = Console.ReadLine();
+                                    office.ViewByState(State);
                                     continue;
                                 default:
                                     Console.WriteLine("Enter a valid Input");
