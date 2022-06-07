@@ -8,21 +8,22 @@ namespace AddressBook
 {
     internal class Contact
     {
-        public string FirstName;
-        public string LastName;
-        public string Address;
-        public string City;
-        public string State;
-        public string Email;
-        public int Zip;
-        public long PhoneNumber;
-        public Contact (string FirstName, string LastName, string Address, string City, string State, string Email, int Zip, long PhoneNumber)
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Address { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string Email { get; set; }
+        public int Zip { get; set; }
+        public long PhoneNumber { get; set; }
+        public Contact(string FirstName, string LastName, string Address, string City, string State, string Email, int Zip, long PhoneNumber)
         {
             this.FirstName = FirstName;
             this.LastName = LastName;
             this.Address = Address;
             this.City = City;
             this.State = State;
+            this.Email = Email;
             this.Zip = Zip;
             this.PhoneNumber = PhoneNumber;
         }
