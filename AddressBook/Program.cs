@@ -26,6 +26,7 @@
                             Console.WriteLine("4:To Remove a Office contact");
                             Console.WriteLine("5: To search with city name");
                             Console.WriteLine("6: To View with State Name");
+                            Console.WriteLine("7: To count Person with City and State Name");
                             Console.WriteLine("0:To Exit");
 
                             int option1 = Convert.ToInt32(Console.ReadLine());
@@ -56,6 +57,9 @@
                                     string State = Console.ReadLine();
                                     friend.ViewByState(State);
                                     continue;
+                                case 7:
+                                    friend.Countperson();
+                                    continue;
                                 default:
                                     Console.WriteLine("Enter a valid Input");
                                     break;
@@ -75,6 +79,7 @@
                             Console.WriteLine("4:To Remove a Office contact");
                             Console.WriteLine("5: To search with city name");
                             Console.WriteLine("6: To View with State Name");
+                            Console.WriteLine("7: To count Person with City and State Name");
                             Console.WriteLine("0:To Exit");
 
                             int option1 = Convert.ToInt32(Console.ReadLine());
@@ -104,6 +109,9 @@
                                     Console.WriteLine("Enter state");
                                     string State = Console.ReadLine();
                                     office.ViewByState(State);
+                                    continue;
+                                case 7:
+                                    office.Countperson();
                                     continue;
                                 default:
                                     Console.WriteLine("Enter a valid Input");
